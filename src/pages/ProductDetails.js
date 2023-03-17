@@ -43,7 +43,12 @@ const ProductDetails = () => {
             <h1 className="text-[26px] font-medium mb-2 max-w-[450px] mx-auto lg:mx-0">
               {title}
             </h1>
-            <div className="text-xl font-medium mb-6">$ {price}</div>
+            <div>
+              <div className="text-xl font-medium mb-6 bg-slate-900 text-white px-5 py-2 rounded-md d-in inline-block">
+                {" "}
+                $ {price}
+              </div>
+            </div>
             <p className="mb-8">{description}</p>
             <button
               className="bg-gray-600 py-4 px-8 text-white rounded-md hover:bg-gray-800 transition-all duration-300"

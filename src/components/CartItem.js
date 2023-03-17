@@ -63,7 +63,9 @@ const CartItem = ({ item }) => {
             </div>
             {/* item prize */}
             <div className="flex-1 flex items-center justify-around">
-              $ {price}
+              <div className="inline-block bg-slate-900 text-white px-1 py-1">
+                $ {price}
+              </div>
             </div>
             {/* final prize */}
             {/* make the price 2 digit */}

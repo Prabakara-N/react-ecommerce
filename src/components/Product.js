@@ -46,7 +46,11 @@ const Product = ({ product }) => {
         <Link to={`/product/${id}`}>
           <h2 className="font-semibold mb-1">{title}</h2>
         </Link>
-        <p className="font-semibold">$ {price}</p>
+        <div>
+          <p className="font-semibold inline-block bg-slate-800 text-white px-1 py-1 rounded-md">
+            $ {price}
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -14,12 +14,12 @@ const Product = ({ product }) => {
   const { id, image, title, category, price } = product;
   return (
     <div>
-      <div className="border border-[#e4e4e4] h-[300px] mb-4 relative overflow-hidden group transition">
+      <div className="border border-[#e4e4e4] h-[300px] mb-4 bg-slate-200 relative overflow-hidden group transition">
         <div className="w-full h-full flex justify-center items-center">
           {/* image */}
           <div className="w-[200px] mx-auto flex justify-center items-center">
             <img
-              className="max-h-[160px] group-hover:scale-110 transition duration-300 "
+              className="max-h-[160px] group-hover:scale-110 transition duration-300 p-img"
               src={image}
               alt={title}
             />

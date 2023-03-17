@@ -30,7 +30,7 @@ const Header = () => {
   return (
     <header
       className={`${
-        isActive ? "bg-white py-4 shadow-md" : "bg-blue-400 py-3"
+        isActive ? "bg-white py-4 shadow-md" : "bg-gray-300 py-3"
       } fixed w-full z-10 transition-all `}
     >
       <div className="container mx-auto px-6 md:px-16 flex justify-between items-center h-full">

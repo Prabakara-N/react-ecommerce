@@ -8,14 +8,18 @@ import "./styles/normalize.css";
 import ProductProvider from "./contexts/ProductContext";
 // sidebar provider
 import SidebarProvider from "./contexts/SidebarContext";
+// Context provider
+import CartProvider from "./contexts/CartContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <SidebarProvider>
-      <ProductProvider>
-        <App />
-      </ProductProvider>
-    </SidebarProvider>
+    <CartProvider>
+      <SidebarProvider>
+        <ProductProvider>
+          <App />
+        </ProductProvider>
+      </SidebarProvider>
+    </CartProvider>
   </React.StrictMode>
 );

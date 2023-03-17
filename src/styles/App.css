@@ -47,3 +47,37 @@ body {
 .p-img {
   mix-blend-mode: multiply;
 }
+
+.alert-section {
+  text-align: center;
+  position: relative;
+}
+
+.alert {
+  background-color: white;
+  padding: 10px 0;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  font-weight: 700;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  border-left: 7px solid #12bb4a;
+  transition: all 0.5s ease-in;
+  color: #03256c;
+  z-index: -99;
+  opacity: 1;
+  position: absolute;
+  top: 6rem;
+}
+
+.alert-cart {
+  transition: all 0.5s ease;
+  position: absolute;
+  top: 8rem;
+  opacity: 1;
+  z-index: 99;
+}

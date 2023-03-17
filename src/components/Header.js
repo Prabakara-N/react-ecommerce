@@ -12,6 +12,9 @@ import { CartContext } from "../contexts/CartContext";
 import { BsBag } from "react-icons/bs";
 import { IoLogoFoursquare } from "react-icons/io";
 
+// alert
+import Alert from "./Alert";
+
 const Header = () => {
   // header state
   const [isActive, setIsActive] = useState(false);
@@ -28,26 +31,29 @@ const Header = () => {
 
   const { itemAmount } = useContext(CartContext);
   return (
-    <header
-      className={`${
-        isActive ? "bg-white py-4 shadow-md" : "bg-gray-300 py-3"
-      } fixed w-full z-10 transition-all `}
-    >
-      <div className="container mx-auto px-6 md:px-16 flex justify-between items-center h-full">
-        <Link to={"/"}>
-          <IoLogoFoursquare className="w-[45px] h-[45px]" />
-        </Link>
-        <div
-          onClick={() => setIsOpen(!isOpen)}
-          className="cursor-pointer flex relative max-w-[50px]"
-        >
-          <BsBag className="text-2xl" />
-          <div className="bg-red-500 absolute -right-2 -bottom-2 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center">
-            {itemAmount}
+    <>
+      <header
+        className={`${
+          isActive ? "bg-white py-5 shadow-md" : "bg-gray-300 py-4"
+        } fixed w-full z-10 transition-all duration-300`}
+      >
+        <div className="container mx-auto px-6 md:px-16 flex justify-between items-center h-full">
+          <Link to={"/"}>
+            <IoLogoFoursquare className="w-[45px] h-[45px]" />
+          </Link>
+          <div
+            onClick={() => setIsOpen(!isOpen)}
+            className="cursor-pointer flex relative max-w-[50px]"
+          >
+            <BsBag className="text-2xl" />
+            <div className="bg-red-500 absolute -right-2 -bottom-2 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center">
+              {itemAmount}
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+      <Alert />
+    </>
   );
 };
 

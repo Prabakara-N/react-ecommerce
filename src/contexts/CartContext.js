@@ -13,6 +13,12 @@ const CartProvider = ({ children }) => {
   // total prize state
   const [total, setTotal] = useState(0);
 
+  // notification
+  const [alertMsg, setAlertMsg] = useState({
+    type: "",
+    msg: "",
+  });
+
   // update item amount
   useEffect(() => {
     if (cart) {
@@ -30,6 +36,18 @@ const CartProvider = ({ children }) => {
     }, 0);
     setTotal(total);
   }, [cart]);
+
+  // alert notification
+  useEffect(() => {
+    const timeOut = setTimeout(() => {
+      setAlertMsg({
+        type: "",
+        msg: "",
+      });
+    }, 2500);
+
+    return () => clearTimeout(timeOut);
+  });
 
   // add to cart
   const addToCart = (product, id) => {
@@ -51,17 +69,31 @@ const CartProvider = ({ children }) => {
     } else {
       setCart([...cart, newItem]);
     }
+
+    setAlertMsg({
+      type: "cart",
+      msg: "Item Added to cart successfully !",
+    });
   };
 
   // remove from the cart
   const removeFromCart = (id) => {
     const remainingCart = cart.filter((item) => item.id !== id);
     setCart(remainingCart);
+
+    setAlertMsg({
+      type: "cart",
+      msg: "Item Removed from the cart successfully !",
+    });
   };
 
   // clear context
   const clearCart = () => {
     setCart([]);
+    setAlertMsg({
+      type: "cart",
+      msg: "Items cleared successfully !",
+    });
   };
 
   // increase button
@@ -100,6 +132,7 @@ const CartProvider = ({ children }) => {
         decreaseAmount,
         itemAmount,
         total,
+        alertMsg,
       }}
     >
       {children}

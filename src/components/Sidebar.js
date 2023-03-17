@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 // import icons
 import { IoMdArrowForward } from "react-icons/io";
-import { FiTrash2 } from "react-icons/fi";
+import { FaTrash } from "react-icons/fa";
 
 // import components
 import CartItem from "../components/CartItem";
@@ -19,7 +19,7 @@ import { CartContext } from "../contexts/CartContext";
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
 
-  const { cart } = useContext(CartContext);
+  const { cart, clearCart, total } = useContext(CartContext);
 
   return (
     <div
@@ -36,10 +36,25 @@ const Sidebar = () => {
           <IoMdArrowForward className="text-2xl" />
         </div>
       </div>
-      <div>
+      <div className="flex flex-col gap-y-2 h-[520px] lg:h-[520px] overflow-y-auto overflow-x-hidden border-b">
         {cart.map((item) => {
           return <CartItem item={item} key={item.id} />;
         })}
+      </div>
+      <div className="flex flex-col gap-y-3 py-4 mt-4">
+        <div className=" flex w-full justify-between items-center">
+          {/* total */}
+          <div className="uppercase font-semibold">
+            <span className="mr-2">Total:</span> ${" "}
+            {parseFloat(total).toFixed(2)}
+          </div>
+          <div
+            className="cursor-pointer py-4 bg-red-500 text-white w-12 h-12 flex justify-center items-centerm text-xl"
+            onClick={clearCart}
+          >
+            <FaTrash />
+          </div>
+        </div>
       </div>
     </div>
   );

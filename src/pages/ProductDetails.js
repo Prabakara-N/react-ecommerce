@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import { CartContext } from "../contexts/CartContext";
 // product context
 import { ProductContext } from "../contexts/ProductContext";
+// icon
+import { FaShoppingCart } from "react-icons/fa";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -31,7 +33,7 @@ const ProductDetails = () => {
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center">
           {/* image */}
-          <div className="flex flex-1 justify-center items-center mb-8 lg:mb-0 ">
+          <div className="flex flex-1 justify-center items-center mb-6 lg:mb-0 ">
             <img
               className="max-w-[200px] h-[200px] lg:max-w-sm md:h-[350px] p-img"
               src={image}
@@ -44,18 +46,24 @@ const ProductDetails = () => {
               {title}
             </h2>
             <div>
-              <div className="text-xl font-medium mb-6 bg-slate-900 text-white px-5 py-2 rounded-md d-in inline-block">
+              <div className="text-md md:text-xl font-medium mb-4 bg-slate-900 text-white px-4 py-2 rounded-md d-in inline-block">
                 {" "}
                 $ {price}
               </div>
             </div>
             <p className="mb-8">{description}</p>
-            <button
-              className="bg-gray-600 py-4 px-8 text-white rounded-md hover:bg-gray-800 transition-all duration-300"
-              onClick={() => addToCart(product, product.id)}
-            >
-              Add to cart
-            </button>
+            <div className="text-center justify-center flex lg:justify-start">
+              <button
+                className="bg-gray-600 py-3 px-8 text-white rounded-md hover:bg-gray-800 transition-all duration-300 flex justify-center items-center gap-2"
+                onClick={() => addToCart(product, product.id)}
+              >
+                Add to cart
+                <div>
+                  {" "}
+                  <FaShoppingCart />
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </div>

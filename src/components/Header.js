@@ -10,7 +10,6 @@ import { CartContext } from "../contexts/CartContext";
 
 // import icons
 import { BsBag } from "react-icons/bs";
-import { IoLogoFoursquare } from "react-icons/io";
 
 // alert
 import Alert from "./Alert";

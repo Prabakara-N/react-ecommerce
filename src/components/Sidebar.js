@@ -25,7 +25,7 @@ const Sidebar = () => {
     <div
       className={`${
         isOpen ? "right-0" : "-right-full"
-      } w-full bg-white fixed top-0 h-full shadow-2xl md:w-[35vw] xl:max-w-[30vw] transition-all duration-300 z-20 px-4 lg:px-[35px]`}
+      } w-full bg-white fixed top-0 h-full shadow-2xl md:w-[35vw] xl:max-w-[30vw] transition-all duration-300 z-50 px-4 lg:px-[35px]`}
     >
       <div className="flex items-center justify-between py-6 border-b">
         <div className="uppercase text-sm font-semibold">
@@ -61,13 +61,13 @@ const Sidebar = () => {
         </div>
         <Link
           to={"/"}
-          className="bg-gray-200 flex p-4 justify-center items-center w-full font-medium "
+          className="bg-gray-200 flex p-4 z-30 justify-center items-center w-full font-medium "
         >
           Buy Now
         </Link>
         <Link
           to={"/"}
-          className="bg-gray-600 text-white flex p-4 justify-center items-center w-full font-medium "
+          className="bg-gray-600 z-30 text-white flex p-4 justify-center items-center w-full font-medium "
         >
           Checkout
         </Link>

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 
 import { CartContext } from "../contexts/CartContext";

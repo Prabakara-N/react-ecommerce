@@ -48,6 +48,10 @@ body {
   mix-blend-mode: multiply;
 }
 
+.logo {
+  mix-blend-mode: color-burn;
+}
+
 .alert-section {
   text-align: center;
   position: relative;

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <>
-      <section className="bg-gray-200 shadow-md h-[800px] bg-hero bg-no-repeat bg-cover bg-center py-24 px-16 -mt-4">
+      <section className="bg-gray-200 shadow-md h-[800px] bg-hero bg-no-repeat bg-cover bg-center py-24 px-16 -mt-3">
         <div className="container mx-auto flex justify-center items-center h-full">
           {/* text */}
           <div className="flex flex-col">
@@ -29,7 +29,7 @@ const Hero = () => {
             <img
               src="https://res.cloudinary.com/daxmjqsy2/image/upload/v1679052439/burgess-milner-OYYE4g-I5ZQ-unsplash_tasmdb.jpg"
               alt="main-bg"
-              className="w-[900px] h-[580px]"
+              className="w-[900px] h-[580px] mt-16"
             />
           </div>
         </div>

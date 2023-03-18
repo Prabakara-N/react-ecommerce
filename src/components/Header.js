@@ -35,11 +35,15 @@ const Header = () => {
       <header
         className={`${
           isActive ? "bg-white py-5 shadow-md" : "bg-gray-300 py-4"
-        } fixed w-full z-10 transition-all duration-300`}
+        } fixed w-full z-10 transition-all duration-300 `}
       >
         <div className="container mx-auto px-6 md:px-16 flex justify-between items-center h-full">
           <Link to={"/"}>
-            <IoLogoFoursquare className="w-[45px] h-[45px]" />
+            <img
+              src="https://e7.pngegg.com/pngimages/946/113/png-clipart-graphic-design-logo-swag-text-art.png"
+              alt="logo"
+              className="w-[80px] h-[60px]  logo"
+            />
           </Link>
           <div
             onClick={() => setIsOpen(!isOpen)}

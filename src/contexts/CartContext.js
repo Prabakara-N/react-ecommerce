@@ -3,9 +3,15 @@ import React, { useState, createContext, useEffect } from "react";
 // create context
 export const CartContext = createContext();
 
+// localstorage get item
+
+let cartData = localStorage.getItem("cart")
+  ? JSON.parse(localStorage.getItem("cart"))
+  : [];
+
 const CartProvider = ({ children }) => {
   // cart state
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(cartData);
 
   // cart amt state
   const [itemAmount, setItemAmount] = useState(0);
@@ -18,6 +24,11 @@ const CartProvider = ({ children }) => {
     type: "",
     msg: "",
   });
+
+  // localstorage set item
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   // update item amount
   useEffect(() => {

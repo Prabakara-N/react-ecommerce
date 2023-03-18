@@ -63,7 +63,7 @@ const Sidebar = () => {
           to={"/"}
           className="bg-gray-200 flex p-4 justify-center items-center w-full font-medium "
         >
-          View Cart
+          Buy Now
         </Link>
         <Link
           to={"/"}

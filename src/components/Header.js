@@ -42,7 +42,7 @@ const Header = () => {
             <img
               src="https://e7.pngegg.com/pngimages/946/113/png-clipart-graphic-design-logo-swag-text-art.png"
               alt="logo"
-              className="w-[80px] h-[60px]  logo"
+              className={`${isActive ? "" : "logo"} w-[80px] h-[50px]`}
             />
           </Link>
           <div
@@ -55,8 +55,8 @@ const Header = () => {
             </div>
           </div>
         </div>
+        <Alert />
       </header>
-      <Alert />
     </>
   );
 };

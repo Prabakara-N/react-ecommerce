@@ -55,7 +55,7 @@ const CartProvider = ({ children }) => {
         type: "",
         msg: "",
       });
-    }, 2500);
+    }, 2000);
 
     return () => clearTimeout(timeOut);
   });

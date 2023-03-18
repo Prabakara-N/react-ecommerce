@@ -38,7 +38,7 @@ const Sidebar = () => {
           <IoMdArrowForward className="text-2xl" />
         </div>
       </div>
-      <div className="flex flex-col gap-y-2 h-[360px] lg:h-[400px] overflow-y-auto overflow-x-hidden border-b">
+      <div className="flex flex-col gap-y-2 h-[330px] lg:h-[400px] overflow-y-auto overflow-x-hidden border-b">
         {cart.map((item) => {
           return <CartItem item={item} key={item.id} />;
         })}
@@ -53,15 +53,17 @@ const Sidebar = () => {
             $ {parseFloat(total).toFixed(2)}
           </div>
           <div
-            className="cursor-pointer py-4 bg-red-500 text-white w-12 h-12 flex justify-center items-centerm text-xl"
+            className="cursor-pointer py-2 px-2 rounded-md bg-red-500 text-white flex justify-center items-centerm text-sm"
             onClick={clearCart}
           >
-            <FaTrash />
+            <p className="flex gap-2 items-center">
+              Clear All <FaTrash />
+            </p>
           </div>
         </div>
         <Link
           to={"/"}
-          className="bg-gray-200 flex p-4 z-30 justify-center items-center w-full font-medium "
+          className="bg-gray-200 flex p-4 z-30 justify-center items-center w-full font-medium hover:bg-slate-300"
         >
           Buy Now
         </Link>

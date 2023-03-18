@@ -101,10 +101,18 @@ const CartProvider = ({ children }) => {
   // clear context
   const clearCart = () => {
     setCart([]);
-    setAlertMsg({
-      type: "cart",
-      msg: "Items cleared successfully !",
-    });
+
+    if (cart.length > 0) {
+      setAlertMsg({
+        type: "cart",
+        msg: "Items cleared successfully !",
+      });
+    } else {
+      setAlertMsg({
+        type: "clear",
+        msg: "Items cleared successfully !",
+      });
+    }
   };
 
   // increase button

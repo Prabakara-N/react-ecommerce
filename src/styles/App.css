@@ -50,7 +50,6 @@ body {
 
 .logo {
   mix-blend-mode: color-burn;
-  /* mix-blend-mode: luminosity; */
 }
 
 .alert-section {

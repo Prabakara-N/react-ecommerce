@@ -1,4 +1,5 @@
 import React from "react";
+import { FcAddImage } from "react-icons/fc";
 
 const SignUp = () => {
   return (

@@ -37,7 +37,7 @@ const Header = () => {
         } fixed w-full z-10 transition-all duration-300 `}
       >
         <div className="container mx-auto px-6 md:px-16 flex justify-between items-center h-full">
-          <Link to={"/"}>
+          <Link to={"/home"}>
             <img
               src="https://e7.pngegg.com/pngimages/946/113/png-clipart-graphic-design-logo-swag-text-art.png"
               alt="logo"

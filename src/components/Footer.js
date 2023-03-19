@@ -12,8 +12,8 @@ const Footer = () => {
       </div>
       <SocialMedia />
       <div className="text-center mt-5">
-        <button className="bg-gray-600 text-white text-center px-3 py-2 rounded-lg font-medium md:px-5 md:py-3 md:rounded-xl md:text-xl md:font-semibold">
-          <Link to="/signin">LogOut</Link>
+        <button className=" px-4 py-2 rounded-lg font-medium bg-gray-600 text-white">
+          <Link to="/signin">Log Out</Link>
         </button>
       </div>
     </footer>

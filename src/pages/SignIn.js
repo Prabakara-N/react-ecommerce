@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../contexts/AuthContext";
+import SocialMedia from "../components/SocialMedia";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const { user, logIn } = UserAuth();
+  const { logIn } = UserAuth();
 
   const navigate = useNavigate();
 
@@ -15,7 +16,7 @@ const SignIn = () => {
     setError("");
     try {
       await logIn(email, password);
-      navigate("/");
+      navigate("/home");
     } catch (error) {
       console.log(error);
       setError(error.message);
@@ -23,7 +24,7 @@ const SignIn = () => {
   };
   return (
     <>
-      <div className="w-full h-screen ">
+      <div className="w-full h-screen mx-auto bg-slate-600 flex justify-center items-center min-h-[100vh]">
         <div className="fixed w-full px-4 py-20 z-50 ">
           <div className="max-w-[450px] h-[600px]mx-auto bg-black/75 text-white rounded-md">
             <div className="max-w-[320px] mx-auto py-16">
@@ -73,6 +74,7 @@ const SignIn = () => {
                   <Link to="/signup"> Sign Up</Link>{" "}
                 </p>
               </form>
+              <SocialMedia />
             </div>
           </div>
         </div>

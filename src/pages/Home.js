@@ -4,8 +4,11 @@ import React, { useContext } from "react";
 import { ProductContext } from "../contexts/ProductContext";
 
 // import products
-import Product from "../components/Product";
+import Header from "../components/Header";
 import Hero from "../components/Hero";
+import Product from "../components/Product";
+import Sidebar from "../components/Sidebar";
+import Footer from "../components/Footer";
 
 const Home = () => {
   // get products from product context
@@ -20,6 +23,7 @@ const Home = () => {
 
   return (
     <div>
+      <Header />
       <Hero />
       <section className="py-16 px-3 lg:px-11">
         <div className="container mx-auto">
@@ -30,6 +34,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <Sidebar />
+      <Footer />
     </div>
   );
 };

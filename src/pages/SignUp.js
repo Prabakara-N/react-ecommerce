@@ -7,6 +7,7 @@ import SocialMedia from "../components/SocialMedia";
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const { signUp } = UserAuth();
 
   const navigate = useNavigate();
@@ -18,11 +19,13 @@ const SignUp = () => {
       navigate("/home");
     } catch (error) {
       console.log(error);
+      setError(error.message);
     }
   };
   return (
     <>
-      <div className="w-full h-screen  bg-slate-600">
+      <div className="w-full h-screen  bg-slate-600 text-center">
+        <div className="bg-black/60 fixed top-0 left-0 w-full h-screen rounded-lg"></div>
         <div className="fixed w-full px-4 py-20 z-50 ">
           <div className="max-w-[450px] h-[600px]mx-auto bg-black/75 text-white rounded-md">
             <div className="max-w-[320px] mx-auto py-16">
@@ -34,6 +37,7 @@ const SignUp = () => {
                 />
               </div>
               <h1 className="text-3xl font-bold">Sign Up</h1>
+              {error ? <small className="text-red-500">{error}</small> : null}
               <form
                 onSubmit={handleSubmit}
                 className="w-full flex flex-col py-4"

@@ -34,7 +34,7 @@ const ProductDetails = () => {
   return (
     <>
       <Header />
-      <section className="pt-28 pb-12 lg:py-32 h-screen flex bg-slate-300">
+      <section className="pt-20 lg:pt-40 pb-12 lg:py-32 h-screen flex bg-slate-300">
         <div className="container mx-auto">
           <div className="flex flex-col lg:flex-row items-center">
             {/* image */}

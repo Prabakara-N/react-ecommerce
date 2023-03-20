@@ -13,7 +13,7 @@ import Footer from "../components/Footer";
 const Home = () => {
   // get products from product context
   const { products } = useContext(ProductContext);
-
+  console.log(products);
   // getting men's & women's clothing category
   const filteredProducts = products.filter(
     (product) =>

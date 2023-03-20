@@ -7,16 +7,10 @@ import SignUp from "./pages/SignUp";
 import Home from "./pages/Home";
 import ProductDetails from "./pages/ProductDetails";
 
-// import components
-// import Header from "./components/Header";
-// import Sidebar from "./components/Sidebar";
-// import Footer from "./components/Footer";
-
 const App = () => {
   return (
     <div className="overflow-hidden">
       <Router>
-        {/* <Header /> */}
         <Routes>
           <Route path="/" element={<SignIn />} />
           <Route path="signup" element={<SignUp />} />
@@ -24,8 +18,6 @@ const App = () => {
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="*" element={<SignIn />} />
         </Routes>
-        {/* <Sidebar />
-        <Footer /> */}
       </Router>
     </div>
   );

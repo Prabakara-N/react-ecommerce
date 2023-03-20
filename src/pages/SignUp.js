@@ -60,7 +60,7 @@ const SignUp = () => {
                   />
                   <button
                     type="submit"
-                    className="bg-gray-600 py-3 my-6 rounded font-semibold"
+                    className="bg-gray-600 py-3 my-6 rounded font-semibold hover:bg-slate-600 transition-all duration-300"
                   >
                     Sign Up
                   </button>

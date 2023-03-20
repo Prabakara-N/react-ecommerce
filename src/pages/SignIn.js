@@ -26,8 +26,8 @@ const SignIn = () => {
     <>
       <div className="w-full h-screen mx-auto bg-slate-600 flex justify-center items-center min-h-[100vh]">
         <div className="fixed w-full px-4 py-20 z-50 ">
-          <div className="max-w-[450px] h-[600px]mx-auto bg-black/75 text-white rounded-md">
-            <div className="max-w-[320px] mx-auto py-16">
+          <div className="max-w-[450px] h-[600px] mx-auto bg-black/75 text-white rounded-md">
+            <div className="max-w-[320px] mx-auto py-16 px-3 md:px-0">
               <div className="logo-login text-center ">
                 <img
                   src="https://e7.pngegg.com/pngimages/946/113/png-clipart-graphic-design-logo-swag-text-art.png"

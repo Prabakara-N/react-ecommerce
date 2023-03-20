@@ -91,3 +91,10 @@ body {
 .alert-clear {
   display: none;
 }
+
+/* .container {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+} */
